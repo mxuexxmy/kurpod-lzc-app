@@ -1,0 +1,7 @@
+services:
+  kurpod-server:
+    image: ghcr.io/srv1n/kurpod-server:latest
+    ports:
+      - "9980:3000"
+    volumes:
+      - ./data:/app/data

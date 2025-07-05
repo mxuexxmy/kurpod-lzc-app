@@ -1,0 +1,30 @@
+{
+  "name": "Kurpod",
+  "package": "xyz.mxue.app.kurpod",
+  "description": "带有无辜文件名的加密文件容器",
+  "homepage": "https://github.com/srv1n/kurpod",
+  "author": "srv1n",
+  "app_features": [],
+  "subdomain": "kurpod",
+  "version": "0.0.1",
+  "iconPath": "icon.png",
+  "composePath": "docker-compose.yml",
+  "unsupported_platforms": [],
+  "lastRouteType": "from_compose",
+  "port_mappings": {
+    "kurpod-server_9980_3000": {
+      "use": true,
+      "type": "http",
+      "path": "/",
+      "targetPath": "/"
+    }
+  },
+  "image_ghcr.io_srv1n_kurpod-server_latest": {
+    "originalImage": "ghcr.io/srv1n/kurpod-server:latest",
+    "pushTarget": "lazycat",
+    "newImageName": "registry.lazycat.cloud/mxuexxmy/srv1n/kurpod-server:a50d9c68abc2cfb2",
+    "timestamp": "2025-07-05T13:12:55.835Z"
+  },
+  "kurpod-server_volume_/app/data_action": "emptyDir",
+  "kurpod-server_volume_/app/data_location": "app_data"
+}
